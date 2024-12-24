@@ -1,0 +1,3 @@
+C:/Users/USTremble/Desktop/pr1main/cmake-build-debug/CMakeFiles/pr1main.dir
+C:/Users/USTremble/Desktop/pr1main/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/USTremble/Desktop/pr1main/cmake-build-debug/CMakeFiles/rebuild_cache.dir
