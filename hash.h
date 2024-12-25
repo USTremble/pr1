@@ -28,7 +28,6 @@ struct HashTable {
     void rehash(int newNumBuckets);
     Vector<string> keys() const;
     bool conatins(string key);
-    string join() const;
 };
 
 template <typename T>
@@ -175,20 +174,6 @@ bool HashTable<T>::conatins(string key) {
         return false;
     }
     return true;
-}
-
-template <typename T>
-string HashTable<T>::join() const {
-    string result = "";
-    for (int i = 0; i < numBuckets; i++) {
-        Data<T>* current = buckets[i];
-        while (current != nullptr) {
-            result += current->key + "," + current->value + ";";
-            current = current->next;
-        }
-    }
-    result = result.substr(0, result.size() - 1); // удаляем ласт ;
-    return result;
 }
 
 template <typename T>

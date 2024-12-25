@@ -4,7 +4,7 @@
 #include "request.h"
 
 int main() {
-    Schema schema = readJson("C:\\Users\\USTremble\\Desktop\\pr1main\\schema.json"); // важно указать путь
+    Schema schema = readJson("schema.json"); // важно указать путь
     createDir(schema);
 
     while (true) {
