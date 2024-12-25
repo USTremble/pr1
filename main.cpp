@@ -4,7 +4,7 @@
 #include "request.h"
 
 int main() {
-    Schema schema = readJson("schema.json"); // важно указать путь
+    Schema schema = readJson("schema.json");
     createDir(schema);
 
     while (true) {
