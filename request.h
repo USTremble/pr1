@@ -464,8 +464,8 @@ void selectWhere(Vector<string>& tables, Vector<string>& tabColumns, Vector<stri
             }
 
             int offset = 0;
-            for (int j = 0; j < i; j++) { // Обработка всех предыдущих таблиц
-                string prevTableName = tables.get(j);
+            for (int t = 0; t < i; t++) { // Обработка всех предыдущих таблиц
+                string prevTableName = tables.get(t);
                 int csvCountForOff = getCsvNum(schema.name + "/" + prevTableName);
                 for (int k = 1; k <= csvCountForOff; k++) {
                     string curCsvPath = schema.name + "/" + prevTableName + "/" + toString(k) + ".csv";
@@ -484,8 +484,8 @@ void selectWhere(Vector<string>& tables, Vector<string>& tabColumns, Vector<stri
                 Vector<string> firstLine = csvData.get(0); // заголовок
 
                 Vector<int> indexCol;
-                for (int j = 0; j < columns.size(); j++) {
-                    string curColumn = columns.get(j);
+                for (int k = 0; k < columns.size(); k++) {
+                    string curColumn = columns.get(k);
                     int index = firstLine.find(curColumn);
                     if (index != -1) {
                         indexCol.pushBack(index + offset);
@@ -501,9 +501,9 @@ void selectWhere(Vector<string>& tables, Vector<string>& tabColumns, Vector<stri
             }
             tablesData.pushBack(tablesRows); // добавляем данные текущей таблицы
 
-            for (int j = 0; j < schemaCols.size(); j++) {
-                newHeader += schemaCols.get(j);
-                if (!(j == schemaCols.size() - 1 && i == tables.size() - 1)) {
+            for (int l = 0; l < schemaCols.size(); l++) {
+                newHeader += schemaCols.get(l);
+                if (!(l == schemaCols.size() - 1 && i == tables.size() - 1)) {
                     newHeader += ",";
                 }
             }

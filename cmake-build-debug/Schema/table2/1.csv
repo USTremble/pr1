@@ -1,8 +1,8 @@
-table2_pk,column1,column2
-1,ru,10
-2,en,11
-3,fr,12
-4,ua,9
-5,1,2
-6,123,15231
-7,fas,321
+table2_pk,name,age
+1,Alex,10
+2,Jo,11
+3,Bob,12
+4,Alice,9
+5,Conor,2
+6,Bill,15231
+7,Alex,321
